@@ -41,7 +41,8 @@ df.head()
 # usvkategorie: USV category for the project
 # usvbeschr: USV description for the project
 # =============================================================================
-
+import nltk
+nltk.download('omw-1.4')
 # Import necessary packages for preprocessing
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
@@ -70,6 +71,8 @@ def preprocess_text(text):
     text = [lemmatizer.lemmatize(word) for word in word_tokenize(text.lower()) if word not in stop_words]
     
     return ' '.join(text)
+
+
 
 # Apply the preprocessing function to the 'description' column
 df['description_clean'] = df['description'].apply(preprocess_text)
