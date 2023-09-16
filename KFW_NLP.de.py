@@ -5,6 +5,7 @@ Created on Tue Jul 18 22:47:59 2023
 @author: Takuya Nakatsu
 """ 
 
+
 # Import necessary packages to read the KFW project dataset
 import json
 import pandas as pd
@@ -88,6 +89,17 @@ vectorizer = CountVectorizer(max_df=0.95, min_df=2, stop_words = "english") #can
 
 # Vectorize the cleaned description
 data_vectorized = vectorizer.fit_transform(df['description_clean'])
+
+
+
+import re
+import spacy
+from spacy.lang.de.stop_words import STOP_WORDS as GERMAN_STOP_WORDS
+
+import spacy.cli
+spacy.cli.download("de_core_news_sm")
+import de_core_news_sm
+
 
 
 # =============================================================================
