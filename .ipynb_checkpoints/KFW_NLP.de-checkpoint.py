@@ -8,8 +8,8 @@ Created on Tue Jul 18 22:47:59 2023
 # Google Colab users: restart your runtime here.
 import interpreter
 # Paste your OpenAI API key below.
-interpreter.api_key = "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"
-interpreter.model = "gpt-3.5-turbo"
+interpreter.api_key = ""
+interpreter.model = ""
 interpreter.auto_run = True
 
 
